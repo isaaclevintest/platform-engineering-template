@@ -1,0 +1,24 @@
+# yaml-language-server: $schema=https://github.com/Azure/deployment-environments/releases/download/2022-11-11-preview/manifest.schema.json
+name: Aspire
+version: 1.0.0
+summary:  .NET Aspire
+description: Provisions and Deploys a .NET Aspire app to Azure using ADE Custom Runner
+runner: "adecustomrunner.azurecr.io/azd:latest"
+templatePath: main.bicep
+
+parameters:
+  - id: name
+    name: Name
+    description: 'Name of the Environment'
+    type: string
+    required: true
+  - id: repoUrl
+    name: Repo Url
+    description: 'Url of Repo to Deploy'
+    type: string
+    required: true
+  - id: branch
+    name: Branch
+    description: 'Optional Branch to Deploy'
+    type: string
+    default: 'main'   
