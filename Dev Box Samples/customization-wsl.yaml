@@ -11,6 +11,10 @@ tasks:
         # Install robot framework
         python.exe -m pip install --upgrade pip;
         pip install robotframework
+  - name: winget
+    parameters:
+      package: Microsoft.VisualStudioCode
+      runAsUser: true
   - name: powershell
     parameters:
       command: |
