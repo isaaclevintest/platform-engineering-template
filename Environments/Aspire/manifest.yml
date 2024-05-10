@@ -12,6 +12,21 @@ parameters:
     description: 'Name of the Environment'
     type: string
     required: true
+  - id: appid
+    name: App Registration ID
+    description: 'App ID for Entra ID Service Principal (this will be removed)'
+    type: string
+    required: true
+  - id: appsecret
+    name: App Registration Secret
+    description: 'App Secret for Entra ID Service Principal (this will be removed)'
+    type: string
+    required: true
+  - id: tenantid
+    name: Tenant ID
+    description: 'Entra Tenant ID'
+    type: string
+    required: true            
   - id: repoUrl
     name: Repo Url
     description: 'Url of Repo to Deploy'
