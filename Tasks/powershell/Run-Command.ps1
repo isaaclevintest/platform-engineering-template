@@ -126,6 +126,7 @@ if($RunAsUser -ne "true") {
     $cleanupfullPath = "$($CustomizationScriptsDir)\$($CleanupScript)"
 
     if(![string]::IsNullOrEmpty($Command)){
+        Add-Content -Path $RunAsUserScriptPath -Value "`n"
         Add-Content -Path $RunAsUserScriptPath -Value $Command
     }
 
